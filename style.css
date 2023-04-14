@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+JP&family=Oxygen:wght@300&family=Rubik:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.header{
+    position: absolute;
+    width: 100%;
+}
+.u--container{
+    background: url("https://cdn.discordapp.com/attachments/987085458347528192/1029851284834111560/2852281.jpg") fixed no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__logo h2{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: lighter;
+    color: white;
+}
+.hero__main{
+    height: 100%;
+}
+.main__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    gap: 1rem;
+}
+.main__text h1{
+    padding: 2rem 5rem;
+    border: 2px solid greenyellow;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: white;
+    font-size: 3rem;
+    font-weight: lighter;
+    animation: opacity 2s;
+    animation-delay: 1s;
+}
+.main__text p{
+    color: white;
+    font-family: 'Oxygen', sans-serif;
+}
+span{
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+}
+.main__icon{
+    position: absolute;
+    bottom: 10%;
+}
+.main__icon i{
+    animation: bounce 1s alternate infinite;
+    font-size: 1.5rem;
+    color: white;
+    animation: up 1s infinite alternate;
+}
+.about{
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+}
+.about__left{
+    animation: left 3s;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+.about__left h3{
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    border-left: 3px solid greenyellow;
+    color: #202020;
+}
+.text__1{
+    padding: 1rem 0;
+}
+.about__left p{
+    color: #202020;
+    padding: 1rem 0;
+    font-family: 'Oxygen', sans-serif;
+}
+button{
+    cursor: pointer;
+    background-color: #202020;
+    padding: 1rem 2rem;
+    color: white;
+    width: fit-content;
+    border: 0;
+    border-radius: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    transition: background-color 250ms;
+}
+button:hover {
+background-color: #383838;
+}
+.about__right{
+    animation: right 3s;
+    flex: 1;
+}
+.about__right img{
+    width: 100%;
+}
+.bottom{
+    background-color: #202020;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+.bottom >div i{
+    font-size: 5rem;
+}
+.bottom >div{
+    width: 50%;
+}
+.bottom >div h3{
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 0;
+}
+.bottom >div p{
+    font-family: 'Oxygen', sans-serif;
+}
+.works{
+    display: flex;
+    color: #202020;
+    flex-direction: column;
+    padding: 5rem;
+    width:auto;
+}
+.works h3{
+    font-family: 'Montserrat', sans-serif;
+    border-left: 3px solid greenyellow;
+    color: #202020;
+    padding: 1rem;
+}
+.works p{
+    color: #202020;
+    font-family: 'Oxygen', sans-serif;
+    padding: 0.5rem 0;
+}
+
+/*             keyframes            */
+
+@keyframes opacity {
+    0%{opacity: 0;}
+    100%{opacity: 100%;}
+}
+@keyframes up{
+    0%{transform: translateY(-10px);}
+    100%{transform: translateY(0);}
+}
+@keyframes right {
+    0%{
+        transform: translateX(100px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+@keyframes left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+/*             media querys             */
+
+
+
+@media screen and (max-width:480px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .main__text h1 {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+    .main__icon {
+        bottom: 20%;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .about__left h3 {
+        border-left: 0px;
+        padding: .5rem;
+        border-bottom: 3px solid greenyellow;
+    }
+    .about__left p {
+        padding: 2rem 0;
+    }
+    .bottom {
+        gap: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .works h3 {
+        border-left: 0px;
+        border-bottom: 3px solid greenyellow;
+    }
+    .works p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}   
